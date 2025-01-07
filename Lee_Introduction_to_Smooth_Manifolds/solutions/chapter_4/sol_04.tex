@@ -1,0 +1,29 @@
+Let $\bbT^2=\bbS^1\times\bbS^1\subseteq\bbC^2$ denote the torus and let $\alpha$ be any irrational number and consider the map $\gamma:\bbR\mapsto\bbT^2$ given by
+
+\begin{align*}
+	\gamma(t) = & \, \left(e^{2\pi i t}, e^{2 \pi i \alpha t}\right)
+\end{align*}
+
+Let $(a,b) \in \bbT^2$. To show that the $\gamma(\bbR)$ is dense in $\bbT^2$, we demonstrate a sequence in $\gamma(\bbR)$ that converges to $(a,b)$. L
+\\\\
+Let $\beta \in \bbR$ s.t. $a = e^{2\pi i \beta}$. Consider the set 
+
+\begin{align*}
+	\left\{\gamma(k+\beta)\right\}_{k \in \bbZ}
+		= & \, 
+	\left\{\left(e^{2\pi i (k+\beta)}, e^{2 \pi i \alpha (k+\beta)}\right)\right\}_{k \in \bbZ}
+\\
+		= & \,
+	\left\{\left(a, e^{2 \pi i \alpha \beta}e^{2 \pi i \alpha k}\right)\right\}_{k \in \bbZ}
+\end{align*}
+
+$\alpha k \mod 1$ is dense in $[0, 1]$ because it is an irrational rotation rotation of the circle, therefore $e^{2 \pi i \alpha k}$ is dense in $\bbC$, therefore there is a subsequence $e^{2 \pi i \alpha k_j} \to b  e^{-2 \pi i \alpha \beta}$, therefore 
+
+\begin{align*}
+	\left\{\gamma(k+\beta)\right\}_{k \in \bbZ}
+		= & \,
+	\left\{\left(a, e^{2 \pi i \alpha \beta}e^{2 \pi i \alpha k}\right)\right\}_{k \in \bbZ}
+	\to (a, b)
+\end{align*}
+
+

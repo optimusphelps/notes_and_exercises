@@ -1,0 +1,12 @@
+For all $x \neq 0$ this is obvious by selecting and $U$ not containing $0$, then $f_U$ is linear thus smooth.
+
+For $x=0$, we have $f(x) = 1$, so we can select the neighborhood $U = (-\delta, \delta)$ and the neighborhood $V = (-\epsilon, \epsilon)$, and let $\phi, \psi$ be the identity.
+
+Then $f^-1(V) = (-\infty, 0]$ so that $U \cap f^{-1}(V) = (-\epsilon, 0]$ and $(\phi \circ f \circ \phi^{-1})_{U \cap f^{-1}(V)} = 0$, so it is smooth.  However, it is not $\phi \circ f \circ \phi^{-1}$ is not smooth on the open set $U$, so is not smooth in the context defined in the chapter.
+
+As an aside, this is consistent with Proposition 2.5 because
+
+\begin{enumerate}
+\item In condition (a), it violates the openness part of the statement.
+\item In condition (b), it violates the continuous.
+\end{enumerate}

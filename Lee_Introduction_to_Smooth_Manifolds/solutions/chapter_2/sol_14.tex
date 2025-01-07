@@ -1,0 +1,50 @@
+We use without proof the fact that topological manifolds are $T_4$.
+
+Therefore for $A, B$ disjoint closed sets there exist disjoint neighborhoods $U_A \supseteq A, U_B \supseteq B$.
+
+By Proposition 2.2.5 there exist smooth bump fuctinos $\psi_A, \psi_B:M\mapsto\bbR$ s.t. 
+
+\begin{enumerate}
+\item $\phi_A^{-1}(1) = A$
+\item $\phi_B^{-1}(1) = B$
+\item $\textrm{supp} \phi_A \subseteq U_A$
+\item $\textrm{supp} \phi_B \subseteq U_B$
+\end{enumerate}
+
+Note that in  particular this implies
+
+\begin{enumerate}
+\item $\phi_A(p) = 0$ for all $p \in B$
+\item $\phi_B(p) = 0$ for all $p \in A$
+\end{enumerate}
+
+
+Let $f = \frac{1}{2}\left(1 - \phi_A + \phi_B\right)$.  $f$ is smooth because it is a linear combination of smooth functions, and clearly $0 \leq f(x) \leq 1$ for all $x \in M$.
+
+Then for all $x \in A$
+
+\begin{align*}
+f(x) 
+	= & \,
+\frac{1}{2}\left(1 - \phi_A(x) + \phi_B(x)\right)
+	\\
+	= & \, 
+\frac{1}{2}\left(1 -  1+ 0\right)
+	\\
+	= & \, 
+0.
+\end{align*}
+
+Similarly, for all $x \in B$
+
+\begin{align*}
+f(x) 
+	= & \,
+\frac{1}{2}\left(1 - \phi_A(x) + \phi_B(x)\right)
+	\\
+	= & \, 
+\frac{1}{2}\left(1 -  0+ 1\right)
+	\\
+	= & \, 
+1.
+\end{align*}

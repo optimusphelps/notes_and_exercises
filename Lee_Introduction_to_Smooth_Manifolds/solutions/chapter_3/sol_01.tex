@@ -1,0 +1,9 @@
+$\implies$
+
+Assume $dF_p$ is the zero map, let $(U,\phi)$ be a coordinate chart on M containing $p$ and $(V,\psi)$ be a coordinate chart on $N$ containing $F(p)$.
+\\\\
+$\phi^{-1} \circ F \circ \psi$ is a map from $\phi(U) \mapsto \phi(V)$ and $d(\phi^{-1} \circ F \circ \psi) = 0$, so $\phi^{-1} \circ F \circ \psi$ is constant on $\phi^{-1}(U)$. Since $\psi$ is a diffeomorphism this means $\phi^{-1} \circ F$ is and $\phi^{-1}$ is a diffeomorphism this means $F$ is constant on $U\cap V$.  Then we can use the fact that $F$ is constant on every coordinate chart $(U, \phi)$ to determine that $F$ is constant on $M$. By the gluing lemma, there is a unique smooth map that agree with this construction on all intersections of smooth charts, therefore it is the constant map.
+
+$\impliedby$
+
+Assume $F$ be constant and let $f \in C^\infty(N)$, then $dF_p(v)(f) = v(f\circ F)$.  Note that $f \circ F$ is constant.  Therefore by Lemma 3.4a, $v(f\circ F) = 0$.  Since $dF_p(v)(f) = 0$ for all $f$, $dF_p(v) = 0$ for all $v \in T_pM$ and $dF_p$ is the zero map.    

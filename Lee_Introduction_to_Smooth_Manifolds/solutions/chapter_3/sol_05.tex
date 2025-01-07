@@ -1,0 +1,23 @@
+Note that $K = \{(x,y): \max{|x|,|y|}=1\}$.
+
+Let $G:\mathbb{R}^2 \setminus 0 \mapsto \mathbb{R}^2 \setminus 0$ st $G(x,y) = \frac{x^2+y^2}{\max{|x|, |y|}}$ and let $F(x,y) = \begin{cases}(x\cdot G(x,y), y\cdot G(x,y))& (x,y) \neq (0,0)\\ 0& \textrm{otherwise}\end{cases}$.
+
+Then on the unit circle 
+\begin{align*}
+F(x,y) = 
+\begin{cases} 
+(\frac{x}{|x|},\frac{y}{|x|}) & \, |x| >= |y|\\
+(\frac{x}{|y|},\frac{y}{|y|}) & \, |x| < |y|
+\end{cases}
+\end{align*}
+So that $F(\mathbb{S}^1) = K$.  Proof that this is a homeomorphism is omitted, but basically divide plane on lines $y = x$ and $y = -x$, it is a homeomorphism on each, and stitch back together.  Then observe that $\lim_{x\to 0,y \to 0} F(x,y) = 0$.
+
+To show that there is no diffeomorpishm, consider a smooth curve $\gamma:J \mapsto \mathbb{S}^1$.  Suppose that such a diffeomorphism F exists, and let $t_0 \in J$ s.t. $F(\gamma(t_0)) = (1,1)$.
+
+\textbf{we need a way to show that t < t0 is on one leg and t0 > j is on the other}
+
+Do the normal thing of identifying $\gamma \circ \iota = \gamma$.
+
+Then $F \circ \gamma$ is a diffeomorphism so that $dF \circ d\gamma:TJ \to \mathbb{R}^2$.  Taking a limit from $t < t_0$ and $t > t_0$ shows that this map cannot even be continuous.
+
+TODO: review and complete

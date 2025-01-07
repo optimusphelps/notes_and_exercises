@@ -1,0 +1,19 @@
+Suppose $\pi:E\mapsto X$ is a topological covering map.
+\\\\
+$\implies$ 
+\\\\
+Suppose $\pi$ is proper.
+\\\\
+Let $p \in X$.  
+\\\\
+Suppose $\pi^{-1}(p)$ is infinite, then it admits an infinite cover (the open ball around each point in the fiber) with no finite subcover, and therefore is not compact.  Since $\{p\}$ is compact, this is a contradiction.
+\\\\
+$\impliedby$ 
+\\\\
+Suppose $\pi$ has finite fibers.  
+\\\\
+Let $K \subseteq X$ be compact, let $L = \pi^{-1}(K)$, $D\subseteq L \subset E$ be an infinite set, and $Y = \pi(D)$. Because $D = \cup_{y\in Y}  \pi^{-1}(y)$ is infinite and $\pi^{-1}(y)$ is finite, $Y$ must be infinite.  Because $K\supseteq Y$ is compact, $Y$ must contain a limit point $\bar{y}$.  We show that $\pi^{-1}(\bar{y})$ is a limit point of $D$.
+\\\\
+Let $U$ be an evenly covered neighborhood of $y_i$ and $U \supseteq \{y_i\} \to \bar{y}$.  Because the fiber$\pi_{-1}(\bar{y})$ is finite, $\pi^{U}$ contains components $V_j$ mapped homeomorphically onto $U$ by $\pi$ and therefore, for each $i,j$ there exist $e_{i,j}\in V_j$ s.t. $\pi(e_{i,j}) = y_i$.  Because $\{y_i\} \subseteq \pi(D)$, for each $i$, there is at least one $j$ s.t. $e_{i,j} \in D$.  Because there are finitely many $j$ and infinitely many $i$, there must be a $\hat{j}$ s.t. $e_{i,\hat{j}} \in D$ for infinitely many $i$.  Because $e_{i,\hat{j}}$ converges, $\lim_i e_{i,\hat{j}}$ is a limit point of D.
+\\\\
+Therefore $\pi$ is proper.

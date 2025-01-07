@@ -1,0 +1,33 @@
+Observation: A function $f:\mathbb{R}^n \mapsto \mathbb{R}^m$ is smooth if and only if its coordinate functions are smooth. (p. 11).
+
+$\implies$
+
+Trivial.
+\\\\
+$\impliedby$ 
+
+Let $p \in N$.  By Proposition 2.5 (a), there exists smooth chart $(U_i, \psi_i), (V_i, \phi_i)$ such that 
+
+1. $F_i(p) \in V_i$
+2. $U_i \cap F_i^{-1}$ is open in $N$
+3. $\psi_i \circ F_i \circ \phi_i^{-1}$ is smooth on from $\phi_i(U_i \cap F_i^{-1})$ to $\psi_i(V_i)$
+
+Let $U = \cap_i U_i$ and $V = \Pi_i V_i$.  First observe that for each $i$
+
+a. $\phi_i|_U = \phi$
+
+b. $F_i|_U$ is smooth for each $i$.
+
+Then let $\psi_i^j$ be the $j$ th coordinate map of $\psi_i$, and note that $\psi|_U = (\psi_1^1,\ldots, \psi_k^{n_k})$ is a smooth map with $\phi_i^j$ the coordinate functions.
+
+We then establish the following properties
+
+1. $F(p) \in V$: clear from definition of $V$
+2. $U \cap F^{-1}(V)$ is open in $N$: note that $F^{-1}(V) = F^{-1}(\Pi_i V_i) = F^{-1}(\cap_i (V_i \times \Pi_{j \neq i} M_j))$
+3. $\psi \circ F \circ \phi^{-1}$
+
+By a-b above and the definition of $\psi$
+
+$\psi \circ F \circ \phi^{-1} = (\psi_1 \circ F_1 \circ \phi_1^{-1}, \ldots, \psi_k \circ F_k \circ \phi_k^{-1})$ is a function $mathbb{R}^n: \mapsto \mathbb{R}^m$, and is smooth in each coordinate, therefore it is smooth.
+
+Because 1-3 are satisfied, the statement follows from Proposition 2.5
