@@ -20,21 +20,27 @@
 
 \documentclass[11pt]{article}
 
-\input{structure.tex} % Include the file specifying the document structure and custom commands
+\input{../template/structure.tex} % Include the file specifying the document structure and custom commands
+\input{macros.tex}
+\usepackage{amsfonts}
+\usepackage[shortlabels]{enumitem}
 
 %----------------------------------------------------------------------------------------
-%	ASSIGNMENT INFORMATION
+%	ASSIGNMENT INFORMATION\input{macros.tex}
+
 %----------------------------------------------------------------------------------------
 
 % Required
-\newcommand{\assignmentQuestionName}{Question} % The word to be used as a prefix to question numbers; example alternatives: Problem, Exercise
-\newcommand{\assignmentClass}{BIO101} % Course/class
-\newcommand{\assignmentTitle}{Assignment\ \#1} % Assignment title or name
-\newcommand{\assignmentAuthorName}{Yosuke Hanamura} % Student name
+\newcommand{\assignmentQuestionName}{Problem} % The word to be used as a prefix to question numbers; example alternatives: Problem, Exercise
+\newcommand{\assignmentClass}{Introduction to Smooth Manifolds} % Course/class
+\newcommand{\assignmentTitle}{Chapters 1-9} % Assignment title or name
+\newcommand{\assignmentAuthorName}{Chris Phelps} % Student name
 
 % Optional (comment lines to remove)
-\newcommand{\assignmentClassInstructor}{Jones 10:30am} % Intructor name/time/description
-\newcommand{\assignmentDueDate}{Monday,\ January\ 24,\ 2019} % Due date
+%\newcommand{\assignmentClassInstructor}{Jones 10:30am} % Intructor name/time/description
+%\newcommand{\assignmentDueDate}{Monday,\ January\ 24,\ 2019} % Due date
+
+%----------------------------------------------------------------------------------------
 
 %----------------------------------------------------------------------------------------
 
@@ -53,130 +59,74 @@
 %----------------------------------------------------------------------------------------
 %	QUESTION 1
 %----------------------------------------------------------------------------------------
-
-\begin{question}
-
-\questiontext{What is the airspeed velocity of an unladen swallow?}
-
-\begin{center}
-	\includegraphics[width=0.5\columnwidth]{swallow.jpg} % Example image
-\end{center}
-
-\answer{While this question leaves out the crucial element of the geographic origin of the swallow, according to Jonathan Corum, an unladen European swallow maintains a cruising airspeed velocity of \textbf{11 metres per second}, or \textbf{24 miles an hour}. The velocity of the corresponding African swallows requires further research as kinematic data is severely lacking for these species.}
-
-\end{question}
-
-%----------------------------------------------------------------------------------------
-%	QUESTION 2
-%----------------------------------------------------------------------------------------
-
-\begin{question}
-
-\questiontext{How much wood would a woodchuck chuck if a woodchuck could chuck wood?}
-
-%--------------------------------------------
-
-\begin{subquestion}{Suppose ``chuck" implies throwing.} % Subquestion within question
-
-\answer{According to the Associated Press (1988), a New York Fish and Wildlife technician named Richard Thomas calculated the volume of dirt in a typical 25--30 foot (7.6--9.1 m) long woodchuck burrow and had determined that if the woodchuck had moved an equivalent volume of wood, it could move ``about \textbf{700 pounds (320 kg)} on a good day, with the wind at his back".}
-
-\end{subquestion}
-
-%--------------------------------------------
-
-\begin{subquestion}{Suppose ``chuck" implies vomiting.} % Subquestion within question
-
-\answer{A woodchuck can ingest 361.92 cm\textsuperscript{3} (22.09 cu in) of wood per day. Assuming immediate expulsion on ingestion with a 5\% retainment rate, a woodchuck could chuck \textbf{343.82 cm\textsuperscript{3}} of wood per day.}
-
-\end{subquestion}
-
-%--------------------------------------------
-
-\end{question}
-
-%----------------------------------------------------------------------------------------
-%	QUESTION 3
-%----------------------------------------------------------------------------------------
-
-\begin{question}
-
-\questiontext{Identify the author of Equation \ref{eq:bayes} below and briefly describe it in English.}
-
-\begin{equation}\label{eq:bayes}
-	P(A|B) = \frac{P(B|A)P(A)}{P(B)}
-\end{equation}
-
-\answer{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor arcu luctus, imperdiet urna iaculis, mattis eros. Pellentesque iaculis odio vel nisl ullamcorper, nec faucibus ipsum molestie. Sed dictum nisl non aliquet porttitor. Etiam vulputate arcu dignissim, finibus sem et, viverra nisl. Aenean luctus congue massa, ut laoreet metus ornare in. Nunc fermentum nisi imperdiet lectus tincidunt vestibulum at ac elit. Nulla mattis nisl eu malesuada suscipit.}
-
-\end{question}
-
-%----------------------------------------------------------------------------------------
-
-\assignmentSection{Bonus Questions}
-
-%----------------------------------------------------------------------------------------
-%	QUESTION 4
-%----------------------------------------------------------------------------------------
-
-\begin{question}
-
-\questiontext{The table below shows the nutritional consistencies of two sausage types. Explain their relative differences given what you know about daily adult nutritional recommendations.}
-
-\begin{table}[h]
-	\centering % Centre the table
-	\begin{tabular}{l l l}
-		\toprule
-		\textit{Per 50g} & Pork & Soy \\
-		\midrule
-		Energy & 760kJ & 538kJ\\
-		Protein & 7.0g & 9.3g\\
-		Carbohydrate & 0.0g & 4.9g\\
-		Fat & 16.8g & 9.1g\\
-		Sodium & 0.4g & 0.4g\\
-		Fibre & 0.0g & 1.4g\\
-		\bottomrule
-	\end{tabular}
-\end{table}
-
-\answer{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor arcu luctus, imperdiet urna iaculis, mattis eros. Pellentesque iaculis odio vel nisl ullamcorper, nec faucibus ipsum molestie. Sed dictum nisl non aliquet porttitor. Etiam vulputate arcu dignissim, finibus sem et, viverra nisl. Aenean luctus congue massa, ut laoreet metus ornare in. Nunc fermentum nisi imperdiet lectus tincidunt vestibulum at ac elit. Nulla mattis nisl eu malesuada suscipit.}
-
-\end{question}
-
-%----------------------------------------------------------------------------------------
-%	QUESTION 5
-%----------------------------------------------------------------------------------------
-
-\begin{question}
-
-\lstinputlisting[
-	caption=Luftballons Perl Script, % Caption above the listing
-	label=lst:luftballons, % Label for referencing this listing
-	language=Perl, % Use Perl functions/syntax highlighting
-	frame=single, % Frame around the code listing
-	showstringspaces=false, % Don't put marks in string spaces
-	numbers=left, % Line numbers on left
-	numberstyle=\tiny, % Line numbers styling
-	]{luftballons.pl}
-
-%--------------------------------------------
-
-\begin{subquestion}{How many luftballons will be output by the Listing \ref{lst:luftballons} above?} % Subquestion within question
-
-\answer{99 luftballons.}
-
-\end{subquestion}
-
-%--------------------------------------------
-
-\begin{subquestion}{Identify the regular expression in Listing \ref{lst:luftballons} and explain how it relates to the anti-war sentiments found in the rest of the script.} % Subquestion within question
-
-\answer{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent porttitor arcu luctus, imperdiet urna iaculis, mattis eros. Pellentesque iaculis odio vel nisl ullamcorper, nec faucibus ipsum molestie. Sed dictum nisl non aliquet porttitor. Etiam vulputate arcu dignissim, finibus sem et, viverra nisl. Aenean luctus congue massa, ut laoreet metus ornare in. Nunc fermentum nisi imperdiet lectus tincidunt vestibulum at ac elit. Nulla mattis nisl eu malesuada suscipit.}
-
-\end{subquestion}
-
-%--------------------------------------------
-
-\end{question}
+\begin{chapter}
+\end{chapter}
+\begin{chapter}
+\makequestion{2}{01}
+\makequestion{2}{02}
+\makequestion{2}{03}
+\makequestion{2}{04}
+\makequestion{2}{05}
+\makequestion{2}{06}
+\makequestion{2}{07}
+\makequestion{2}{08}
+\makequestion{2}{09}
+\makequestion{2}{10}
+\makequestion{2}{11}
+\makequestion{2}{12}
+\makequestion{2}{13}
+\makequestion{2}{14}
+\end{chapter}
+\begin{chapter}
+\makequestion{3}{01}
+\makequestion{3}{02}
+\makequestion{3}{03}
+\makequestion{3}{04}
+\makequestion{3}{05}
+\makequestion{3}{06}
+\makequestion{3}{07}
+\makequestion{3}{08}
+\end{chapter}
+\begin{chapter}
+\makequestion{4}{01}
+\makequestion{4}{02}
+\makequestion{4}{03}
+\makequestion{4}{04}
+\makequestion{4}{05}
+\makequestion{4}{06}
+\makequestion{4}{07}
+\makequestion{4}{08}
+\makequestion{4}{09}
+\makequestion{4}{10}
+\makequestion{4}{11}
+\makequestion{4}{12}
+\makequestion{4}{13}
+\end{chapter}
+\begin{chapter}
+\makequestion{5}{01}
+\makequestion{5}{02}
+\makequestion{5}{03}
+\makequestion{5}{04}
+\makequestion{5}{05}
+\makequestion{5}{06}
+\makequestion{5}{07}
+\makequestion{5}{08}
+\makequestion{5}{09}
+\makequestion{5}{10}
+\makequestion{5}{11}
+\makequestion{5}{12}
+\makequestion{5}{13}
+\makequestion{5}{14}
+\makequestion{5}{15}
+\makequestion{5}{16}
+\makequestion{5}{17}
+\makequestion{5}{18}
+\makequestion{5}{19}
+\makequestion{5}{20}
+\makequestion{5}{21}
+\makequestion{5}{22}
+\makequestion{5}{23}
+\end{chapter}
 
 %----------------------------------------------------------------------------------------
 

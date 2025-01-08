@@ -1,3 +1,6 @@
+% C. Phelps custom macros for hw
+
+% TYPESETTING
 \newcommand{\bbH}{\ensuremath{\mathbb{H}}}
 \newcommand{\bbR}{\ensuremath{\mathbb{R}}}
 \newcommand{\bbS}{\ensuremath{\mathbb{S}}}
@@ -6,3 +9,11 @@
 \newcommand{\bbP}{\ensuremath{\mathbb{P}}}
 \newcommand{\bbZ}{\ensuremath{\mathbb{Z}}}
 \newcommand{\inc}{\ensuremath{\hookrightarrow}}
+
+% BUILDING PROBLEMS
+\newcommand{\makequestion}[2]{
+\begin{question}
+\questiontext{\input{problems/chapter_#1/prob_#2.tex}}
+\answer{\input{solutions/chapter_#1/sol_#2.tex}}
+\end{question}
+}

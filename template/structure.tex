@@ -84,42 +84,71 @@
 \usepackage{titlesec} % Required for modifying sections
 
 %------------------------------------------------
-% Section
-
+% Chapter
 \titleformat
 {\section} % Section type being modified
 [block] % Shape type, can be: hang, block, display, runin, leftmargin, rightmargin, drop, wrap, frame
-{\Large\bfseries} % Format of the whole section
-{\assignmentQuestionName~\thesection} % Format of the section label
+{\LARGE\bfseries} % Format of the whole section
+{
+	{
+	\newline
+	\centering{
+		\rule{1\textwidth}{1.5pt}
+%		\vspace{0.05\baselineskip}
+		\\
+		\Huge{\MakeUppercase{Chapter~\thesection}}
+		\\
+		\vspace{-0.5\baselineskip}
+		\rule{1\textwidth}{1.4pt}}
+	}
+}
 {6pt} % Space between the title and label
 {} % Code before the label
 
-\titlespacing{\section}{0pt}{0.5\baselineskip}{0.5\baselineskip} % Spacing around section titles, the order is: left, before and after
+\titlespacing{\section}{0pt}{0.05\baselineskip}{0.05\baselineskip} % Spacing around section titles, the order is: left, before and after
+
+% Section
+
+\titleformat
+{\subsection} % Section type being modified
+[block] % Shape type, can be: hang, block, display, runin, leftmargin, rightmargin, drop, wrap, frame
+{\Large\bfseries} % Format of the whole section
+{\assignmentQuestionName~\thesubsection} % Format of the section label
+{6pt} % Space between the title and label
+{} % Code before the label
+
+\titlespacing{\subsection}{0pt}{0.5\baselineskip}{0.5\baselineskip} % Spacing around section titles, the order is: left, before and after
 
 %------------------------------------------------
 % Subsection
 
 \titleformat
-{\subsection} % Section type being modified
+{\subsubsection} % Section type being modified
 [block] % Shape type, can be: hang, block, display, runin, leftmargin, rightmargin, drop, wrap, frame
 {\itshape} % Format of the whole section
-{(\alph{subsection})} % Format of the section label
+{(\alph{subsubsection})} % Format of the section label
 {4pt} % Space between the title and label
 {} % Code before the label
 
-\titlespacing{\subsection}{0pt}{0.5\baselineskip}{0.5\baselineskip} % Spacing around section titles, the order is: left, before and after
+\titlespacing{\subsubsection}{0pt}{0.5\baselineskip}{0.5\baselineskip} % Spacing around section titles, the order is: left, before and after
 
-\renewcommand\thesubsection{(\alph{subsection})}
+\renewcommand\thesubsubsection{(\alph{subsubsection})}
 
 %----------------------------------------------------------------------------------------
 %	CUSTOM QUESTION COMMANDS/ENVIRONMENTS
 %----------------------------------------------------------------------------------------
 
+\newenvironment{chapter}{
+	\newpage
+	\section{} % Blank section title (e.g. just Question 2)
+	\rfoot{\small\itshape Chapter~\thesection}
+}
+
 % Environment to be used for each question in the assignment
 \newenvironment{question}{
 	\vspace{0.5\baselineskip} % Whitespace before the question
-	\section{} % Blank section title (e.g. just Question 2)
-	\lfoot{\small\itshape\assignmentQuestionName~\thesection~continued on next page\ldots} % Set the left footer to state the question continues on the next page, this is reset to nothing if it doesn't (below)
+	\subsection{} % Blank section title (e.g. just Question 2)
+	\lfoot{\small\itshape\assignmentQuestionName~\thesubsection~continued on next page\ldots} % Set the left footer to state the question continues on the next page, this is reset to nothing if it doesn't (below)
 }{
 	\lfoot{} % Reset the left footer to nothing if the current question does not continue on the next page
 }
@@ -128,7 +157,7 @@
 
 % Environment for subquestions, takes 1 argument - the name of the section
 \newenvironment{subquestion}[1]{
-	\subsection{#1}
+	\subsubsection{#1}
 }{
 }
 

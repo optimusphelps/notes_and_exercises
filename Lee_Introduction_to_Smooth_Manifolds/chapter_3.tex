@@ -21,6 +21,7 @@
 \documentclass[11pt]{article}
 
 \input{../template/structure.tex} % Include the file specifying the document structure and custom commands
+\input{macros.tex}
 \usepackage{amsfonts}
 \usepackage[shortlabels]{enumitem}
 
@@ -33,25 +34,11 @@
 \newcommand{\assignmentClass}{Introduction to Smooth Manifolds} % Course/class
 \newcommand{\assignmentTitle}{Chapter\ \#3} % Assignment title or name
 \newcommand{\assignmentAuthorName}{Chris Phelps} % Student name
-\newcommand{\bbH}{\ensuremath{\mathbb{H}}}
-\newcommand{\bbR}{\ensuremath{\mathbb{R}}}
-\newcommand{\bbS}{\ensuremath{\mathbb{S}}}
-\newcommand{\bbT}{\ensuremath{\mathbb{T}}}
-\newcommand{\bbC}{\ensuremath{\mathbb{C}}}
-\newcommand{\bbP}{\ensuremath{\mathbb{P}}}
-\newcommand{\bbZ}{\ensuremath{\mathbb{Z}}}
-\newcommand{\inc}{\ensuremath{\hookrightarrow}}
 
 % Optional (comment lines to remove)
 %\newcommand{\assignmentClassInstructor}{Jones 10:30am} % Intructor name/time/description
 %\newcommand{\assignmentDueDate}{Monday,\ January\ 24,\ 2019} % Due date
 
-\newcommand{\makequestion}[1]{ %TODO: generalize
-\begin{question}
-\questiontext{\input{problems/chapter_3/prob_#1.tex}}
-\answer{\input{solutions/chapter_3/sol_#1.tex}}
-\end{question}
-}
 %----------------------------------------------------------------------------------------
 
 \begin{document}
@@ -69,14 +56,14 @@
 %----------------------------------------------------------------------------------------
 %	Problems
 %----------------------------------------------------------------------------------------
-\makequestion{01}
-\makequestion{02}
-\makequestion{03}
-\makequestion{04}
-\makequestion{05}
-\makequestion{06}
-\makequestion{07}
-\makequestion{08}
+\makequestion{3}{01}
+\makequestion{3}{02}
+\makequestion{3}{03}
+\makequestion{3}{04}
+\makequestion{3}{05}
+\makequestion{3}{06}
+\makequestion{3}{07}
+\makequestion{3}{08}
 %----------------------------------------------------------------------------------------
 
 \end{document}
